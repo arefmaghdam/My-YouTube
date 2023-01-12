@@ -1,0 +1,1 @@
+mockoon-cli start -p 3001 -d .\server.json
