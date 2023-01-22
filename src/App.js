@@ -1,14 +1,8 @@
-import PieChartComponent from "antaeus.components.piechart";
-import logo from "./logo.svg";
 import "./App.css";
-import { useState, useEffect } from "react";
-import Layout from "./components/Layout/Layout";
+import AppRouter from "./AppRouter";
 
 function App() {
-
-  return (
-    <Layout/>
-  );
+  return <AppRouter />;
 }
 
 export default App;
