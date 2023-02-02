@@ -1,5 +1,31 @@
+import style from "./Layout.module.css";
+import { FaYoutube } from "react-icons/fa";
+import { SlMenu } from "react-icons/sl";
+
 const Layout = () => {
-  return <div>Layout component initialized!</div>;
+  return (
+    <div className={`container-fluid ${style.LayoutContainer}`}>
+      <div className={`row ${style.LayoutHeader}`}>
+        <div className={`col-md-2 ${style.sidebarBox}`}>
+          <div>
+            <a className={style.homeMenu} href="">
+              <SlMenu />
+            </a>
+            <a className={style.homeIcon} href=""><FaYoutube/></a>
+            <a href="" className={style.youtube}>YouTube</a>
+          </div>
+        </div>
+        <div className={`col-md-8 ${style.searchbarBox}`}>serchbar</div>
+        <div className={`col-md-2 ${style.signinBox}`}>signin</div>
+      </div>
+      <div className={`row ${style.LayoutBody}`}>
+        <div className={`col-md-8 ${style.playerBox}`}>video player</div>
+        <div className={`col-md-4 ${style.suggestionBox}`}>
+          suggestion videos
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Layout;

@@ -1,0 +1,72 @@
+.LayoutHeader {
+    height: 9vh;
+    width: 100vw;
+}
+
+.LayoutBody {
+    width: 100vw;
+}
+
+.homeIcon {
+    font-size: 20px;
+    position: absolute;
+    left: 5vw;
+    color: red;
+}
+
+.homeIcon:hover {
+    color: red;
+}
+
+.sidebarBox > div > h3 {
+    font-weight: bold;
+}
+
+.youtube {
+    font-weight: bold;
+    left: 7vw;
+    color: black;
+    position: absolute;
+    top: 2.5vh;
+}
+
+.youtube:hover {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+}
+
+.homeMenu {
+    color: black;
+    position: absolute;
+    top: 2.9vh;
+}
+
+.homeMenu:hover {
+    color: rgb(48, 48, 48);
+}
+
+.sidebarBox {
+    background-color: white;
+    text-align: left;
+    padding-top: 2.5vh;
+}
+
+.searchbarBox {
+    background-color: red;
+    text-align: center;
+}
+
+.signinBox {
+    background-color: rgb(0, 114, 227);
+    text-align: right;
+}
+
+.playerBox {
+    background-color: rgb(0, 217, 0);
+    text-align: center;
+}
+
+.suggestionBox {
+    background-color: yellow;
+    text-align: center;
+}
