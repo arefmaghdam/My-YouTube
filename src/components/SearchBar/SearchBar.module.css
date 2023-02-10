@@ -1,0 +1,52 @@
+.typeAheadContainer {
+  text-align: center;
+  width: 60vw;
+  position: relative;
+}
+
+.typeAhead {
+  position: absolute;
+  right: 3vw;
+  left: 3.5vw;
+  width: 53.5vw;
+}
+
+.typeAheadContainer input {
+  border-radius: 25px;
+}
+
+.typeAheadContainer input:focus {
+  box-shadow: 0 0 0 0.07rem rgba(0,123,255,.25);  
+}
+
+.typeAheadContainer button {
+  border-radius:0 25px 25px 0;
+  position: absolute;
+  top: 1px;
+  right: 3.15vw;
+  height: 94%;
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+
+.typeAheadContainer button:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.mcp button {
+  position: absolute;
+  height: 65%;
+  border-radius: 25px;
+  width: 3.5vw;
+  top: 1.6vh;
+  right: 4vw ;
+  background-color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-left: 0.8vw;
+}
+
+.mcp button:hover {
+  background-color: rgb(236, 236, 236);
+}
+
