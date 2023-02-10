@@ -1,6 +1,7 @@
 import style from "./Layout.module.css";
 import { FaYoutube } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Layout = () => {
   return (
@@ -15,7 +16,7 @@ const Layout = () => {
             <a href="" className={style.youtube}>YouTube</a>
           </div>
         </div>
-        <div className={`col-md-8 ${style.searchbarBox}`}>serchbar</div>
+        <div className={`col-md-8 ${style.searchbarBox}`}><SearchBar/></div>
         <div className={`col-md-2 ${style.signinBox}`}>signin</div>
       </div>
       <div className={`row ${style.LayoutBody}`}>
