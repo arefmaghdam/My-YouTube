@@ -1,14 +1,14 @@
 .typeAheadContainer {
-  text-align: center;
-  width: 60vw;
+  align-items: center;
+  width: 52vw;
   position: relative;
 }
 
 .typeAhead {
   position: absolute;
-  right: 3vw;
-  left: 3.5vw;
-  width: 53.5vw;
+  right: 7vw;
+  left: 7vw;
+  width: 42vw;
 }
 
 .typeAheadContainer input {
@@ -23,7 +23,7 @@
   border-radius:0 25px 25px 0;
   position: absolute;
   top: 1px;
-  right: 3.15vw;
+  right: 3.10vw;
   height: 94%;
   background-color: rgb(245, 245, 245);
   color: black;
@@ -35,15 +35,15 @@
 
 .mcp button {
   position: absolute;
-  height: 65%;
-  border-radius: 25px;
-  width: 3.5vw;
+  height: 40px;
+  border-radius: 20px;
+  width: 40px;
   top: 1.6vh;
-  right: 4vw ;
+  left: 51.5vw ;
   background-color: white;
   font-size: 1.3rem;
   text-align: center;
-  padding-left: 0.8vw;
+  padding-left: 8px;
 }
 
 .mcp button:hover {
