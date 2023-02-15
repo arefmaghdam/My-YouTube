@@ -1,0 +1,25 @@
+.signinButton {
+  position: relative;
+  border-radius: 20px;
+  height: 33px;
+  padding-top: 0;
+  background-color: white;
+  color: rgb(4, 121, 255);
+  padding-bottom: 15px;
+  width: 100px;
+  font-weight: 550;
+}
+
+.signinButton a {
+  position: absolute;
+  top: 2.5px;
+  right: 10px;
+}
+
+.userbtn {
+  position: absolute;
+  left: 7px;
+  top: 4.5px;
+  font-size: 22px;
+  color: rgb(4, 121, 255);
+}
