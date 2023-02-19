@@ -1,5 +1,5 @@
 .LayoutHeader {
-    height: 9vh;
+    height: 60px;
     width: 100vw;
 }
 
@@ -10,7 +10,8 @@
 .homeIcon {
     font-size: 20px;
     position: absolute;
-    left: 5vw;
+    top: 17px;
+    left: 45px;
     color: red;
 }
 
@@ -24,10 +25,10 @@
 
 .youtube {
     font-weight: bold;
-    left: 7vw;
+    left: 66px;
     color: black;
     position: absolute;
-    top: 2.5vh;
+    top: 17.5px;
 }
 
 .youtube:hover {
@@ -38,7 +39,7 @@
 .homeMenu {
     color: black;
     position: absolute;
-    top: 2.9vh;
+    top: 20px;
 }
 
 .homeMenu:hover {
@@ -48,19 +49,19 @@
 .sidebarBox {
     background-color: white;
     text-align: left;
-    padding-top: 2.5vh;
+    padding-top: 20px;
 }
 
 .searchbarBox {
     background-color: rgb(255, 255, 255);
     text-align: center;
-    padding-top: 1.75vh;
+    padding-top: 12px;
 }
 
 .signinBox {
-    background-color: rgb(0, 114, 227);
+    background-color: white;
     text-align: right;
-    padding-top: 2.5vh;
+    padding-top: 13px;
 }
 
 .playerBox {
