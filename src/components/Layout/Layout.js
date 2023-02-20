@@ -3,6 +3,7 @@ import { FaYoutube } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 import SearchBar from "../SearchBar/SearchBar";
 import Signin from "../Signin/Signin";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const Layout = () => {
   return (
@@ -29,7 +30,7 @@ const Layout = () => {
         </div>
       </div>
       <div className={`row ${style.LayoutBody}`}>
-        <div className={`col-md-8 ${style.playerBox}`}>video player</div>
+        <div className={`col-md-8 ${style.playerBox}`}><VideoPlayer/></div>
         <div className={`col-md-4 ${style.suggestionBox}`}>
           suggestion videos
         </div>
