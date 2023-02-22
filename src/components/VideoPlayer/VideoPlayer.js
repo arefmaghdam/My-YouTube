@@ -7,8 +7,8 @@ const VideoPlayer = () => {
   });
 
   const opts = (YouTubeProps["opts"] = {
-    height: "390",
-    width: "640",
+    height: "485",
+    width: "850",
     // playerVars: "https://www.youtube.com/watch?v=6QfN3ghaUfE",
   });
 
