@@ -9,10 +9,10 @@ const VideoPlayer = () => {
   const opts = (YouTubeProps["opts"] = {
     height: "485",
     width: "850",
-    // playerVars: "https://www.youtube.com/watch?v=6QfN3ghaUfE",
+    // playerVars: "https://developers.google.com/youtube/player_parameters",
   });
 
-  return <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={onPlayerReady} />;
+  return <YouTube videoId="6QfN3ghaUfE" opts={opts} onReady={onPlayerReady} />;
 };
 
 export default VideoPlayer;

@@ -4,6 +4,7 @@ import { SlMenu } from "react-icons/sl";
 import SearchBar from "../SearchBar/SearchBar";
 import Signin from "../Signin/Signin";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import RelatedVideos from "../RelatedVideos/RelatedVideos";
 
 const Layout = () => {
   return (
@@ -32,7 +33,7 @@ const Layout = () => {
       <div className={`row ${style.LayoutBody}`}>
         <div className={`col-md-8 ${style.playerBox}`}><VideoPlayer/></div>
         <div className={`col-md-4 ${style.suggestionBox}`}>
-          suggestion videos
+          <RelatedVideos/>
         </div>
       </div>
     </div>
