@@ -1,0 +1,26 @@
+.flexContainer {
+  display: flex;
+  background-color: white;
+  height: 15vh;
+  padding: 8px;
+  gap: 5px;
+}
+
+.flex-container > div {
+  background: #ffecb3;
+  border: 3px solid #ffcc80;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.item2 {
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.item2 h6 {
+  margin-bottom: 0;
+  padding-top: 1px;
+}

@@ -1,3 +1,4 @@
+import style from "./RelatedVideos.module.css";
 import YouTube from "react-youtube";
 import YouTubeProps from "react-youtube";
 
@@ -10,18 +11,66 @@ const RelatedVideos = () => {
 
   return (
     <div>
-      <YouTube videoId="fj9pIe4XMeI" opts={opts} />
-      <YouTube videoId="Ajy0RafE46k" opts={opts} />
-      <YouTube videoId="YmQSo2ZE_cU" opts={opts} />
-      <YouTube videoId="xWDRD6UqZWc" opts={opts} />
-      <YouTube videoId="f2EqECiTBL8" opts={opts} />
-      <YouTube videoId="NqzdVN2tyvQ" opts={opts} />
-      <YouTube videoId="RVFAyFWO4go" opts={opts} />
-      <YouTube videoId="gieEQFIfgYc" opts={opts} />
-      <YouTube videoId="d56mG7DezGs" opts={opts} />
-      <YouTube videoId="erEgovG9WBs" opts={opts} />
-      <YouTube videoId="azcrPFhaY9k" opts={opts} />
-      <YouTube videoId="6avJHaC3C2U" opts={opts} />
+      <div className={style.flexContainer}>
+        <div className={style.item1}>
+          <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+        </div>
+        <div className={style.item2}>
+          <h6>HTML & CSS learning crash course</h6>
+          <a>frontcast</a>
+          <div>
+            <a>1.6k view . 1 years ago</a>
+          </div>
+        </div>
+      </div>
+      <div className={style.flexContainer}>
+        <div className={style.item1}>
+          <YouTube videoId="Ajy0RafE46k" opts={opts} />
+        </div>
+        <div className={style.item2}>
+          <h6>HTML & CSS learning crash course</h6>
+          <a>frontcast</a>
+          <div>
+            <a>1.6k view . 1 years ago</a>
+          </div>
+        </div>
+      </div>
+      <div className={style.flexContainer}>
+        <div className={style.item1}>
+          <YouTube videoId="YmQSo2ZE_cU" opts={opts} />
+        </div>
+        <div className={style.item2}>
+          <h6>HTML & CSS learning crash course</h6>
+          <a>frontcast</a>
+          <div>
+            <a>1.6k view . 1 years ago</a>
+          </div>
+        </div>
+      </div>
+      <div className={style.flexContainer}>
+        <div className={style.item1}>
+          <YouTube videoId="xWDRD6UqZWc" opts={opts} />
+        </div>
+        <div className={style.item2}>
+          <h6>HTML & CSS learning crash course</h6>
+          <a>frontcast</a>
+          <div>
+            <a>1.6k view . 1 years ago</a>
+          </div>
+        </div>
+      </div>
+      <div className={style.flexContainer}>
+        <div className={style.item1}>
+          <YouTube videoId="f2EqECiTBL8" opts={opts} />
+        </div>
+        <div className={style.item2}>
+          <h6>HTML & CSS learning crash course</h6>
+          <a>frontcast</a>
+          <div>
+            <a>1.6k view . 1 years ago</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
