@@ -1,0 +1,9 @@
+.videoStyle {
+    height: 100%;
+    width: 100%;
+}
+
+.videoStyle > div {
+    height: 100%;
+    width: 100%;
+}

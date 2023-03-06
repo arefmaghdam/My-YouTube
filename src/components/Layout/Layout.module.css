@@ -66,9 +66,13 @@
 }
 
 .playerBox {
-    padding-top: 25px;
+    padding-top: 31.5px;
+    padding-right: 0;
+    padding-left: 40px;
     background-color: white;
     text-align: center;
+    width: 65vw;
+    height: calc(65vw * 0.58);
 }
 
 .suggestionBox {
