@@ -28,10 +28,10 @@ const RelatedVideos = () => {
           <YouTube videoId="Ajy0RafE46k" opts={opts} />
         </div>
         <div className={style.item2}>
-          <h6>HTML & CSS learning crash course</h6>
-          <a>frontcast</a>
+          <h6>React JS learning crash course</h6>
+          <a>NeonLearn</a>
           <div>
-            <a>1.6k view . 1 years ago</a>
+            <a>2.8k view . 1.5 years ago</a>
           </div>
         </div>
       </div>
@@ -40,10 +40,10 @@ const RelatedVideos = () => {
           <YouTube videoId="YmQSo2ZE_cU" opts={opts} />
         </div>
         <div className={style.item2}>
-          <h6>HTML & CSS learning crash course</h6>
+          <h6>Node.js learning crash course</h6>
           <a>frontcast</a>
           <div>
-            <a>1.6k view . 1 years ago</a>
+            <a>2.1k view . 2 years ago</a>
           </div>
         </div>
       </div>
@@ -52,10 +52,10 @@ const RelatedVideos = () => {
           <YouTube videoId="xWDRD6UqZWc" opts={opts} />
         </div>
         <div className={style.item2}>
-          <h6>HTML & CSS learning crash course</h6>
-          <a>frontcast</a>
+          <h6>Java Script learning crash course</h6>
+          <a>NeonLearn</a>
           <div>
-            <a>1.6k view . 1 years ago</a>
+            <a>2.3k view . 3 years ago</a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ const RelatedVideos = () => {
           <YouTube videoId="f2EqECiTBL8" opts={opts} />
         </div>
         <div className={style.item2}>
-          <h6>HTML & CSS learning crash course</h6>
+          <h6>Node.js learning Full course</h6>
           <a>frontcast</a>
           <div>
             <a>1.6k view . 1 years ago</a>
