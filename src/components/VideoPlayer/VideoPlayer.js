@@ -14,9 +14,18 @@ const VideoPlayer = () => {
   });
 
   return (
-    <div className={style.videoStyle}>
-      <YouTube videoId="6QfN3ghaUfE" opts={opts} onReady={onPlayerReady} />
-    </div>
+    <>
+      <div className={style.videoStyle}>
+        <YouTube videoId="6QfN3ghaUfE" opts={opts} onReady={onPlayerReady} />
+      </div>
+      <div className={style.videoCaption}>
+        <h5>React & Redux Learning crash course</h5>
+        <div className={style.flexContainer}>
+          <div className={style.item1}>profile</div>
+          <div className={style.item2}>like/dislike</div>
+        </div>
+      </div>
+    </>
   );
 };
 
