@@ -38,6 +38,7 @@
 .item2 {
   flex-grow: 1;
   text-align: right;
+  position: relative;
 }
 
 .profile {
@@ -75,4 +76,29 @@
 
 .subscribe:hover {
     background-color: rgb(32, 32, 32);
+}
+
+.optionbtn {
+    position: absolute;
+    right: 0;
+}
+
+.savebtn {
+    position: absolute;
+    right: 40px;
+}
+
+.sharebtn {
+    position: absolute;
+    right: 100px;
+}
+
+.dislikebtn {
+    position: absolute;
+    right: 150px;
+}
+
+.likebtn {
+    position: absolute;
+    right: 200px;
 }

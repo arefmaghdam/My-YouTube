@@ -32,7 +32,13 @@ const VideoPlayer = () => {
               <button className={`btn ${style.subscribe}`}>Subscribe</button>
             </div>
           </div>
-          <div className={style.item2}>like/dislike</div>
+          <div className={style.item2}>
+            <button className={style.optionbtn}>...</button>
+            <button className={style.savebtn}>Save</button>
+            <button className={style.sharebtn}>Share</button>
+            <button className={style.dislikebtn}>disL</button>
+            <button className={style.likebtn}>like</button>
+          </div>
         </div>
       </div>
     </>
