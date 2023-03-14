@@ -1,6 +1,7 @@
 import YouTube from "react-youtube";
 import YouTubeProps from "react-youtube";
 import style from "./VideoPlayer.module.css";
+import { BiUserCircle } from "react-icons/bi";
 
 const VideoPlayer = () => {
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
@@ -21,7 +22,16 @@ const VideoPlayer = () => {
       <div className={style.videoCaption}>
         <h5>React & Redux Learning crash course</h5>
         <div className={style.flexContainer}>
-          <div className={style.item1}>profile</div>
+          <div className={style.item1}>
+            <div className={style.profile}>
+              <BiUserCircle />
+              <div className={style.profileName}>
+                <h6>Masood Sadri</h6>
+                <div>3.2K subscribers</div>
+              </div>
+              <button className={`btn ${style.subscribe}`}>Subscribe</button>
+            </div>
+          </div>
           <div className={style.item2}>like/dislike</div>
         </div>
       </div>
