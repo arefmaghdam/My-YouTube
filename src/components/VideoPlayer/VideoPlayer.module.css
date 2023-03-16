@@ -39,66 +39,103 @@
   flex-grow: 1;
   text-align: right;
   position: relative;
+  padding-top: 5px;
 }
 
 .profile {
-    position: relative;
-    margin-top: 0;
-    font-size: 35px;
+  position: relative;
+  margin-top: 0;
+  font-size: 35px;
 }
 
 .profileName {
-    position: absolute;
-    top: 0;
-    left : 45px
+  position: absolute;
+  top: 0;
+  left: 45px;
 }
 
 .profileName > div {
-    font-size: 13px;
-    color: rgb(98, 98, 98);
+  font-size: 13px;
+  color: rgb(98, 98, 98);
 }
 
 .profileName > h6 {
-    padding-top: 3.5px;
-    margin-bottom: 1px;
+  padding-top: 3.5px;
+  margin-bottom: 1px;
 }
 
 .subscribe {
-    position: absolute;
-    top: 0;
-    left: 170px;
-    background-color: black;
-    color: white;
-    margin-top: 7px;
-    border-radius: 25px;
-    padding-top: 3px;
+  position: absolute;
+  top: 0;
+  left: 170px;
+  background-color: black;
+  color: white;
+  margin-top: 7px;
+  border-radius: 25px;
+  padding-top: 3px;
 }
 
 .subscribe:hover {
-    background-color: rgb(32, 32, 32);
+  background-color: rgb(32, 32, 32);
 }
 
 .optionbtn {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
+  border-radius: 25px;
+  padding-top: 10px;
 }
 
 .savebtn {
-    position: absolute;
-    right: 40px;
+  position: absolute;
+  right: 52px;
+  border-radius: 25px;
+  padding-top: 5px;
+  height: 42px;
+}
+
+.savebtn > svg {
+  font-size: 15px;
+}
+
+.savebtn path {
+  padding: 0;
+  margin: 0;
 }
 
 .sharebtn {
-    position: absolute;
-    right: 100px;
+  position: absolute;
+  right: 140px;
+  border-radius: 25px;
 }
 
 .dislikebtn {
-    position: absolute;
-    right: 150px;
+  font-size: 20px;
+  position: absolute;
+  right: 235px;
+  border-radius: 0 25px 25px 0;
+  border-left: 0.5px solid rgb(195, 195, 195);
+  padding-bottom: 0;
+  width: 60px;
 }
 
 .likebtn {
-    position: absolute;
-    right: 200px;
+  font-size: 20px;
+  position: absolute;
+  right: 289px;
+  border-radius: 25px 0 0 25px;
+  border-right: 0.5px solid rgb(195, 195, 195);
+  padding-bottom: 0;
+  position: relative;
+  width: 85px;
+  padding-left: 0;
+}
+
+.likebtn a {
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  margin-left: 0;
+  padding-left: 0;
 }

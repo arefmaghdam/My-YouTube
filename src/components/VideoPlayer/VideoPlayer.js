@@ -2,6 +2,11 @@ import YouTube from "react-youtube";
 import YouTubeProps from "react-youtube";
 import style from "./VideoPlayer.module.css";
 import { BiUserCircle } from "react-icons/bi";
+import { RiPlayListAddLine } from "react-icons/ri";
+import { SlOptions } from "react-icons/sl";
+import { TbShare3 } from "react-icons/tb";
+import { SlDislike } from "react-icons/sl";
+import { SlLike } from "react-icons/sl";
 
 const VideoPlayer = () => {
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
@@ -33,11 +38,21 @@ const VideoPlayer = () => {
             </div>
           </div>
           <div className={style.item2}>
-            <button className={style.optionbtn}>...</button>
-            <button className={style.savebtn}>Save</button>
-            <button className={style.sharebtn}>Share</button>
-            <button className={style.dislikebtn}>disL</button>
-            <button className={style.likebtn}>like</button>
+            <button className={`btn ${style.optionbtn}`}>
+              <SlOptions />
+            </button>
+            <button className={`btn ${style.savebtn}`}>
+              <RiPlayListAddLine /> Save
+            </button>
+            <button className={`btn ${style.sharebtn}`}>
+              <TbShare3 /> Share
+            </button>
+            <button className={`btn ${style.dislikebtn}`}>
+              <SlDislike />
+            </button>
+            <button className={`btn ${style.likebtn}`}>
+              <SlLike /> <a>415</a>
+            </button>
           </div>
         </div>
       </div>
