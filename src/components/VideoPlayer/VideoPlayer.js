@@ -54,6 +54,18 @@ const VideoPlayer = () => {
               <SlLike /> <a>415</a>
             </button>
           </div>
+          <span className={style.videoAbstract}>
+            <h6>14K views 1 year ago</h6>
+            <p>
+              This course is an intensive course that starts with the most basic
+              topics and the main focus during the course will be on the more
+              important concepts of the React library. The React intensive
+              course is suitable for two groups of people, the first group of
+              people who have no knowledge of this library but are interested in
+              learning it, and the second group of people who intend to review
+              the most important concepts in a short time.
+            </p>
+          </span>
         </div>
       </div>
     </>
