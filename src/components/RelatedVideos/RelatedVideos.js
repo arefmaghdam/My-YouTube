@@ -13,7 +13,7 @@ const RelatedVideos = () => {
     <div>
       <div className={style.flexContainer}>
         <div className={style.item1}>
-          <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+          {/* <YouTube videoId="fj9pIe4XMeI" opts={opts} /> */}
         </div>
         <div className={style.item2}>
           <h6>HTML & CSS learning crash course</h6>
@@ -25,7 +25,7 @@ const RelatedVideos = () => {
       </div>
       <div className={style.flexContainer}>
         <div className={style.item1}>
-          <YouTube videoId="Ajy0RafE46k" opts={opts} />
+          {/* <YouTube videoId="Ajy0RafE46k" opts={opts} /> */}
         </div>
         <div className={style.item2}>
           <h6>React JS learning crash course</h6>
@@ -37,7 +37,7 @@ const RelatedVideos = () => {
       </div>
       <div className={style.flexContainer}>
         <div className={style.item1}>
-          <YouTube videoId="YmQSo2ZE_cU" opts={opts} />
+          {/* <YouTube videoId="YmQSo2ZE_cU" opts={opts} /> */}
         </div>
         <div className={style.item2}>
           <h6>Node.js learning crash course</h6>
@@ -49,7 +49,7 @@ const RelatedVideos = () => {
       </div>
       <div className={style.flexContainer}>
         <div className={style.item1}>
-          <YouTube videoId="xWDRD6UqZWc" opts={opts} />
+          {/* <YouTube videoId="xWDRD6UqZWc" opts={opts} /> */}
         </div>
         <div className={style.item2}>
           <h6>Java Script learning crash course</h6>
@@ -61,7 +61,7 @@ const RelatedVideos = () => {
       </div>
       <div className={style.flexContainer}>
         <div className={style.item1}>
-          <YouTube videoId="f2EqECiTBL8" opts={opts} />
+          {/* <YouTube videoId="f2EqECiTBL8" opts={opts} /> */}
         </div>
         <div className={style.item2}>
           <h6>Node.js learning Full course</h6>

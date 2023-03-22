@@ -166,3 +166,21 @@
   text-align: justify;
   font-size: 15px;
 }
+
+.sortbtn {
+  text-align: left;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.sortbtn span {
+  padding-right: 30px;
+  font-size: 17px;
+  font-weight: 490;
+}
+
+.sortbtn button {
+  font-size: 15px;
+  font-weight: 500;
+  background-color: white;
+}

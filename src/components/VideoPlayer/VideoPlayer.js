@@ -7,6 +7,7 @@ import { SlOptions } from "react-icons/sl";
 import { TbShare3 } from "react-icons/tb";
 import { SlDislike } from "react-icons/sl";
 import { SlLike } from "react-icons/sl";
+import {MdSort} from "react-icons/md"
 
 const VideoPlayer = () => {
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
@@ -21,9 +22,9 @@ const VideoPlayer = () => {
 
   return (
     <>
-      <div className={style.videoStyle}>
+      {/* <div className={style.videoStyle}>
         <YouTube videoId="6QfN3ghaUfE" opts={opts} onReady={onPlayerReady} />
-      </div>
+      </div> */}
       <div className={style.videoCaption}>
         <h5>React & Redux Learning crash course</h5>
         <div className={style.flexContainer}>
@@ -65,6 +66,10 @@ const VideoPlayer = () => {
               learning it, and the second group of people who intend to review
               the most important concepts in a short time.
             </p>
+            <div className={`${style.sortbtn}`}>
+              <span>98 Comments</span>
+              <button className={`btn`}><MdSort/> Sort by</button>
+            </div>
           </span>
         </div>
       </div>
