@@ -5,14 +5,22 @@ import SearchBar from "../SearchBar/SearchBar";
 import Signin from "../Signin/Signin";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import RelatedVideos from "../RelatedVideos/RelatedVideos";
+import { useState } from "react";
 
 const Layout = () => {
+  const [sidebarState, setSidebarState] = useState(false);
+
+  const sidebarStatus = () => {
+    setSidebarState(!sidebarState);
+    console.log(sidebarState);
+  };
+
   return (
     <div className={`container-fluid ${style.LayoutContainer}`}>
       <div className={`row ${style.LayoutHeader}`}>
         <div className={`col-md-2 ${style.sidebarBox}`}>
           <div>
-            <a className={style.homeMenu} href="">
+            <a onClick={sidebarStatus} className={style.homeMenu}>
               <SlMenu />
             </a>
             <a className={style.homeIcon} href="">
@@ -30,10 +38,19 @@ const Layout = () => {
           <Signin />
         </div>
       </div>
-      <div className={`row ${style.LayoutBody}`}>
-        <div className={`col-md-8 ${style.playerBox}`}><VideoPlayer/></div>
-        <div className={`col-md-4 ${style.suggestionBox}`}>
-          <RelatedVideos/>
+      <div className="row">
+        <div className={sidebarState == true ? `col-md-2` : `col-md-1`}>
+          <div className={`${style.sideColumn}`}>
+          <div className={style.sideMenu}></div>
+          <div
+            className={
+              sidebarState == true ? style.sidebarShow : style.sidebarHide
+            }
+          ></div>
+          </div>
+        </div>
+        <div className={sidebarState == true ? `col-md-10` : `col-md-11`}>
+          <div className={style.videoListColumn}>videos list</div>
         </div>
       </div>
     </div>
