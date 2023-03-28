@@ -6,6 +6,7 @@ import Signin from "../Signin/Signin";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import RelatedVideos from "../RelatedVideos/RelatedVideos";
 import { useState } from "react";
+import VideosList from "../VideosList/VideosList";
 
 const Layout = () => {
   const [sidebarState, setSidebarState] = useState(false);
@@ -41,16 +42,20 @@ const Layout = () => {
       <div className="row">
         <div className={sidebarState == true ? `col-md-2` : `col-md-1`}>
           <div className={`${style.sideColumn}`}>
-          <div className={style.sideMenu}></div>
-          <div
-            className={
-              sidebarState == true ? style.sidebarShow : style.sidebarHide
-            }
-          ></div>
+            <div className={style.sideMenu}>sidebar</div>
+            <div
+              className={
+                sidebarState == true ? style.sidebarShow : style.sidebarHide
+              }
+            >
+              sidebar show
+            </div>
           </div>
         </div>
         <div className={sidebarState == true ? `col-md-10` : `col-md-11`}>
-          <div className={style.videoListColumn}>videos list</div>
+          <div className={style.videoListColumn}>
+            <VideosList />
+          </div>
         </div>
       </div>
     </div>

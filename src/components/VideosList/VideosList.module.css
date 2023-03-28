@@ -1,0 +1,30 @@
+.category {
+    background-color: greenyellow;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+}
+
+.videos {
+    background-color: burlywood;
+}
+
+.categoryButtons {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.categoryButtons:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.categoryButtons:focus {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+}
