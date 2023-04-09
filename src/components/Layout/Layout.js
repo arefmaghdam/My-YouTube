@@ -3,17 +3,23 @@ import { FaYoutube } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 import SearchBar from "../SearchBar/SearchBar";
 import Signin from "../Signin/Signin";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import RelatedVideos from "../RelatedVideos/RelatedVideos";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideosList from "../VideosList/VideosList";
+import { useSelector } from "react-redux";
 
 const Layout = () => {
   const [sidebarState, setSidebarState] = useState(false);
+  const [optStatus, setOptStatus] = useState(false);
+
+  const optionMenuStatus = useSelector((state) => state.optionMenuStatus.value);
+
+  useEffect(() => {
+    if (optionMenuStatus == 0) return;
+    setOptStatus(!optStatus);
+  }, [optionMenuStatus]);
 
   const sidebarStatus = () => {
     setSidebarState(!sidebarState);
-    console.log(sidebarState);
   };
 
   return (
@@ -57,6 +63,11 @@ const Layout = () => {
             <VideosList />
           </div>
         </div>
+      </div>
+      <div
+        className={optStatus == false ? style.hideOptMenu : style.optionMenu}
+      >
+        Option Menu
       </div>
     </div>
   );

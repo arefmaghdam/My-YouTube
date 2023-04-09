@@ -1,113 +1,135 @@
+.LayoutContainer {
+  position: relative;
+}
+
 .LayoutHeader {
-    height: 60px;
-    width: 100vw;
+  height: 60px;
+  width: 100vw;
 }
 
 .LayoutBody {
-    width: 100vw;
+  width: 100vw;
 }
 
 .homeIcon {
-    font-size: 20px;
-    position: absolute;
-    top: 17px;
-    left: 45px;
-    color: red;
+  font-size: 20px;
+  position: absolute;
+  top: 17px;
+  left: 45px;
+  color: red;
 }
 
 .homeIcon:hover {
-    color: red;
+  color: red;
 }
 
 .sidebarBox > div > h3 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .youtube {
-    font-weight: bold;
-    left: 66px;
-    color: black;
-    position: absolute;
-    top: 17.5px;
+  font-weight: bold;
+  left: 66px;
+  color: black;
+  position: absolute;
+  top: 17.5px;
 }
 
 .youtube:hover {
-    text-decoration: none;
-    color: rgb(48, 48, 48);
+  text-decoration: none;
+  color: rgb(48, 48, 48);
 }
 
 .homeMenu {
-    color: black;
-    position: absolute;
-    top: 20px;
+  color: black;
+  position: absolute;
+  top: 20px;
 }
 
 .homeMenu:hover {
-    color: rgb(48, 48, 48);
-    cursor: pointer;
+  color: rgb(48, 48, 48);
+  cursor: pointer;
 }
 
 .sidebarBox {
-    background-color: white;
-    text-align: left;
-    padding-top: 20px;
+  background-color: white;
+  text-align: left;
+  padding-top: 20px;
 }
 
 .searchbarBox {
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 12px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 12px;
 }
 
 .signinBox {
-    background-color: white;
-    text-align: right;
-    padding-top: 13px;
-    padding-right: 40px;
+  background-color: white;
+  text-align: right;
+  padding-top: 13px;
+  padding-right: 40px;
 }
 
 .playerBox {
-    padding-top: 31.5px;
-    padding-right: 0;
-    padding-left: 40px;
-    background-color: white;
-    text-align: center;
-    width: 65vw;
-    height: calc(65vw * 0.57);
+  padding-top: 31.5px;
+  padding-right: 0;
+  padding-left: 40px;
+  background-color: white;
+  text-align: center;
+  width: 65vw;
+  height: calc(65vw * 0.57);
 }
 
 .suggestionBox {
-    padding-top: 25px;
-    background-color: white;
-    text-align: left;
+  padding-top: 25px;
+  background-color: white;
+  text-align: left;
 }
 
 .sidebarShow {
-    height: calc(100vh - 60px);
-    width: 100%;
-    background-color: rgb(249, 179, 179);
-    display: block;
-    position: absolute;
-    top: 0;
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-color: rgb(249, 179, 179);
+  display: block;
+  position: absolute;
+  top: 0;
 }
 
 .sidebarHide {
-    display: none;
+  display: none;
 }
 
 .sideMenu {
-    height: calc(100vh - 60px);
-    width: 100%;
-    background-color: rgb(243, 243, 146);
-    position: absolute;
-    top: 0;
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-color: rgb(243, 243, 146);
+  position: absolute;
+  top: 0;
 }
 
 .sideColumn {
-    position: relative;
+  position: relative;
 }
 
 .videoListColumn {
-    background-color: white;
+  background-color: white;
+}
 
+.optionMenu {
+  display: block;
+  position: absolute;
+  height: 66vh;
+  width: 22vw;
+  background-color: white;
+  top: 47px;
+  right: 130px;
+  padding: 7px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 38px 6px rgba(214, 214, 214, 0.84);
+  -moz-box-shadow: 0px 5px 38px 6px rgba(214, 214, 214, 0.84);
+  box-shadow: 0px 5px 38px 6px rgba(214, 214, 214, 0.84);
+}
+
+.hideOptMenu {
+  display: none;
 }

@@ -1,5 +1,5 @@
 .category {
-    background-color: greenyellow;
+    background-color: white;
     display: flex;
     flex-flow: row nowrap;
     overflow-x: auto;
