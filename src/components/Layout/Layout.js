@@ -8,7 +8,7 @@ import VideosList from "../VideosList/VideosList";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
-  const [sidebarState, setSidebarState] = useState(false);
+  const [sidebarState, setSidebarState] = useState(true);
   const [optStatus, setOptStatus] = useState(false);
 
   const optionMenuStatus = useSelector((state) => state.optionMenuStatus.value);
