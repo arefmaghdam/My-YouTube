@@ -12,11 +12,24 @@ const VideosList = () => {
     },
   };
 
+  const leftScroll = (value) => {
+    const element = document.getElementById("scrollDiv");
+    element.scrollLeft += value;
+  };
+
+  const rightScroll = (value) => {
+    const element = document.getElementById("scrollDiv");
+    element.scrollLeft += value;
+  };
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <div className={style.category}>
+          <button onClick={() => leftScroll(-50)} className={style.leftScroll}>
+            left
+          </button>
+          <div id="scrollDiv" className={style.category}>
             <button className={`btn ${style.categoryButtons}`}>All</button>
             <button className={`btn ${style.categoryButtons}`}>Live</button>
             <button className={`btn ${style.categoryButtons}`}>Music</button>
@@ -40,6 +53,9 @@ const VideosList = () => {
               Pop Music
             </button>
           </div>
+          <button onClick={() => rightScroll(50)} className={style.rightScroll}>
+            right
+          </button>
         </div>
       </div>
       <div className="row">

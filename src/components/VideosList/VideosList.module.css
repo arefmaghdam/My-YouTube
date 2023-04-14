@@ -4,6 +4,23 @@
   flex-flow: row nowrap;
   overflow-x: auto;
   margin-bottom: 25px;
+  position: relative;
+  scrollbar-width: 1px;
+  scroll-behavior: smooth;
+}
+
+.leftScroll {
+position: absolute;
+left: 0;
+z-index: 1;
+top: 0;
+}
+
+.rightScroll {
+  position:absolute;
+  right: 0;
+  z-index: 1;
+  top: 0;
 }
 
 .videos {
