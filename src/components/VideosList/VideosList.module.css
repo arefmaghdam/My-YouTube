@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+.category::-webkit-scrollbar{
+  display: none;
+}
+
 .leftScroll {
 position: absolute;
 left: 0;
