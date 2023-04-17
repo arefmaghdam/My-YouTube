@@ -1,6 +1,7 @@
 import YouTube from "react-youtube";
 import style from "./VideosList.module.css";
-import { YouTubeProps } from "react-youtube";
+import { BsChevronLeft } from "react-icons/bs";
+import { BsChevronRight } from "react-icons/bs";
 
 const VideosList = () => {
   const opts = {
@@ -26,8 +27,10 @@ const VideosList = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <button onClick={() => leftScroll(-50)} className={style.leftScroll}>
-            left
+          <button onClick={() => leftScroll(-50)} className={`btn ${style.leftScroll}`}>
+            <a>
+              <BsChevronLeft />
+            </a>
           </button>
           <div id="scrollDiv" className={style.category}>
             <button className={`btn ${style.categoryButtons}`}>All</button>
@@ -53,8 +56,10 @@ const VideosList = () => {
               Pop Music
             </button>
           </div>
-          <button onClick={() => rightScroll(50)} className={style.rightScroll}>
-            right
+          <button onClick={() => rightScroll(50)} className={`btn ${style.rightScroll}`}>
+            <a>
+              <BsChevronRight />
+            </a>
           </button>
         </div>
       </div>
