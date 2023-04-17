@@ -55,6 +55,11 @@ const VideosList = () => {
             <button className={`btn ${style.categoryButtons}`}>
               Pop Music
             </button>
+            <button className={`btn ${style.categoryButtons}`}>Robotic</button>
+            <button className={`btn ${style.categoryButtons}`}>Electronic</button>
+            <button className={`btn ${style.categoryButtons}`}>ECU Repairing</button>
+            <button className={`btn ${style.categoryButtons}`}>ASP.Net Core</button>
+            <button className={`btn ${style.categoryButtons}`}>Sport Cars</button>
           </div>
           <button onClick={() => rightScroll(50)} className={`btn ${style.rightScroll}`}>
             <a>
