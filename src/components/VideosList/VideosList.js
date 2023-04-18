@@ -2,8 +2,12 @@ import YouTube from "react-youtube";
 import style from "./VideosList.module.css";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
+import { useState } from "react";
 
 const VideosList = () => {
+  const [leftScrollState, setLeftScrollState] = useState(0);
+  const [rightScrollState, setRightScrollState] = useState(1);
+
   const opts = {
     width: "",
     height: "",
@@ -15,11 +19,24 @@ const VideosList = () => {
 
   const leftScroll = (value) => {
     const element = document.getElementById("scrollDiv");
+    if (element.scrollLeft == 0) {
+      setLeftScrollState(0);
+    }
+    else {
+      setRightScrollState(1);
+      setLeftScrollState(1);
+    }
     element.scrollLeft += value;
   };
 
   const rightScroll = (value) => {
     const element = document.getElementById("scrollDiv");
+    if (element.scrollWidth - element.scrollLeft - element.offsetWidth == 0) {
+      setRightScrollState(0);
+    } else {
+      setRightScrollState(1);
+      setLeftScrollState(1);
+    }
     element.scrollLeft += value;
   };
 
@@ -27,7 +44,12 @@ const VideosList = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <button onClick={() => leftScroll(-50)} className={`btn ${style.leftScroll}`}>
+          <button
+            onClick={() => leftScroll(-50)}
+            className={`btn ${style.leftScroll} ${
+              leftScrollState == 1 ? style.showButton : style.hideButton
+            }`}
+          >
             <a>
               <BsChevronLeft />
             </a>
@@ -56,12 +78,25 @@ const VideosList = () => {
               Pop Music
             </button>
             <button className={`btn ${style.categoryButtons}`}>Robotic</button>
-            <button className={`btn ${style.categoryButtons}`}>Electronic</button>
-            <button className={`btn ${style.categoryButtons}`}>ECU Repairing</button>
-            <button className={`btn ${style.categoryButtons}`}>ASP.Net Core</button>
-            <button className={`btn ${style.categoryButtons}`}>Sport Cars</button>
+            <button className={`btn ${style.categoryButtons}`}>
+              Electronic
+            </button>
+            <button className={`btn ${style.categoryButtons}`}>
+              ECU Repairing
+            </button>
+            <button className={`btn ${style.categoryButtons}`}>
+              ASP.Net Core
+            </button>
+            <button className={`btn ${style.categoryButtons}`}>
+              Sport Cars
+            </button>
           </div>
-          <button onClick={() => rightScroll(50)} className={`btn ${style.rightScroll}`}>
+          <button
+            onClick={() => rightScroll(50)}
+            className={`btn ${style.rightScroll} ${
+              rightScrollState == 1 ? style.showButton : style.hideButton
+            }`}
+          >
             <a>
               <BsChevronRight />
             </a>
