@@ -21,8 +21,7 @@ const VideosList = () => {
     const element = document.getElementById("scrollDiv");
     if (element.scrollLeft == 0) {
       setLeftScrollState(0);
-    }
-    else {
+    } else {
       setRightScrollState(1);
       setLeftScrollState(1);
     }
@@ -103,20 +102,85 @@ const VideosList = () => {
           </button>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-4">
-          <div className={style.videos}>
-            <YouTube videoId="R7roiId3--U" opts={opts} />
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="R7roiId3--U" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
           </div>
         </div>
-        <div className="col-md-4">
-          <div className={style.videos}>
-            <YouTube videoId="6QfN3ghaUfE" opts={opts} />
+        <div className="row">
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="R7roiId3--U" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
           </div>
         </div>
-        <div className="col-md-4">
-          <div className={style.videos}>
-            <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+        <div className="row">
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="R7roiId3--U" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="R7roiId3--U" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
+          </div>
+          <div className="col-md-4">
+            <div className={style.videos}>
+              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
+            </div>
+            <div className={style.videoCaption}>video caption</div>
           </div>
         </div>
       </div>
