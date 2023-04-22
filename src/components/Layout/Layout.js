@@ -6,6 +6,7 @@ import Signin from "../Signin/Signin";
 import { useEffect, useState } from "react";
 import VideosList from "../VideosList/VideosList";
 import { useSelector } from "react-redux";
+import WideSidebar from "../WideSidebar/WideSidebar";
 
 const Layout = () => {
   const [sidebarState, setSidebarState] = useState(true);
@@ -54,7 +55,7 @@ const Layout = () => {
                 sidebarState == true ? style.sidebarShow : style.sidebarHide
               }
             >
-              sidebar show
+              <WideSidebar />
             </div>
           </div>
         </div>
