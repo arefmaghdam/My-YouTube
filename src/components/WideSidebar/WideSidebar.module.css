@@ -1,0 +1,99 @@
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.sidebar {
+  position: relative;
+}
+
+.sidebar:hover {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.sidebar h6 {
+  padding-top: 5px;
+}
+
+.pStyle {
+  font-size: 15px;
+  padding: 5px;
+  text-align: left;
+}
+
+.signinButton {
+  position: relative;
+  border-radius: 20px;
+  height: 35px;
+  padding-top: 0;
+  background-color: white;
+  color: rgb(4, 121, 255);
+  padding-bottom: 15px;
+  margin-bottom: 12px;
+  width: 100px;
+  font-weight: 500;
+  border: 0.5px solid rgb(216, 216, 216);
+}
+
+.signinButton:hover {
+  background-color: rgb(217, 240, 253);
+}
+
+.signinButton a {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+.userbtn {
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  font-size: 22px;
+  color: rgb(4, 121, 255);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.iconColor {
+  color: red;
+}
+
+.sidebar li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebar li:active {
+    font-weight: 500;
+}
+
+.sidebar li:hover {
+    cursor: pointer;
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+}
+
+.sidebar span {
+  padding-right: 35px;
+  font-size: 20px;
+}
+
+.sidebar span svg {
+  position: absolute;
+  bottom: 11px;
+}
