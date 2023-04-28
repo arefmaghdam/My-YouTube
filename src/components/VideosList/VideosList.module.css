@@ -1,3 +1,18 @@
+.videoContainer {
+  position: relative;
+}
+
+.verticalScrollable {
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+
+.verticalScrollable> .row {
+  position: absolute;
+  height: 100%;
+  overflow-y: scroll;
+}
+
 .category {
   padding-left: 50px;
   padding-right: 50px;

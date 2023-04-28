@@ -40,7 +40,7 @@ const VideosList = () => {
   };
 
   return (
-    <div className="container">
+    <div className={`container ${style.videoContainer}`}>
       <div className="row">
         <div className="col-md-12">
           <button
@@ -102,86 +102,96 @@ const VideosList = () => {
           </button>
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="R7roiId3--U" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
+      <div className={`row ${style.verticalScrollable}`}>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
           </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
-          </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
-          </div>
+          <div className={style.videoCaption}>video caption</div>
         </div>
-        <div className="row">
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="R7roiId3--U" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
           </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
-          </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
-          </div>
+          <div className={style.videoCaption}>video caption</div>
         </div>
-        <div className="row">
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="R7roiId3--U" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
           </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
-          </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
-          </div>
+          <div className={style.videoCaption}>video caption</div>
         </div>
-        <div className="row">
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="R7roiId3--U" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
           </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="6QfN3ghaUfE" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
           </div>
-          <div className="col-md-4">
-            <div className={style.videos}>
-              <YouTube videoId="fj9pIe4XMeI" opts={opts} />
-            </div>
-            <div className={style.videoCaption}>video caption</div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
           </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
+        </div>
+        <div className="col-md-4">
+          <div className={style.videos}>
+            <YouTube videoId="R7roiId3--U" opts={opts} />
+          </div>
+          <div className={style.videoCaption}>video caption</div>
         </div>
       </div>
     </div>
