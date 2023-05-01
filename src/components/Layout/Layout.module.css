@@ -102,7 +102,7 @@
 .sideMenu {
   height: calc(100vh - 60px);
   width: 100%;
-  background-color: rgb(243, 243, 146);
+  background-color: white;
   position: absolute;
   top: 0;
 }
