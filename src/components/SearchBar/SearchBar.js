@@ -6,25 +6,8 @@ import Button from "@mui/material/Button";
 import style from "./SearchBar.module.css";
 import { BsSearch } from "react-icons/bs";
 import { MdKeyboardVoice } from "react-icons/md";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("All");
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchTerm}&key=AIzaSyB2N5UT2XMF5BB96S5wEVauTxjFMklOB5s`
-      )
-      .then((response) => {
-        if (response.status !== 200) return;
-        console.log(response.data.items);
-      })
-      .catch((err) => {
-        console.log(err.code);
-      });
-  }, []);
   return (
     <>
       <div className={`${style.typeAheadContainer}`}>

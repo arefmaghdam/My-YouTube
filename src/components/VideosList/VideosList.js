@@ -2,11 +2,29 @@ import YouTube from "react-youtube";
 import style from "./VideosList.module.css";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const VideosList = () => {
   const [leftScrollState, setLeftScrollState] = useState(0);
   const [rightScrollState, setRightScrollState] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("All");
+  const [videoItems, setVideoItems] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchTerm}&key=AIzaSyB2N5UT2XMF5BB96S5wEVauTxjFMklOB5s`
+      )
+      .then((response) => {
+        if (response.status !== 200) return;
+        console.log(response.data.items);
+        setVideoItems(response.data.items);
+      })
+      .catch((err) => {
+        console.log(err.code);
+      });
+  }, [searchTerm]);
 
   const opts = {
     width: "",
@@ -103,12 +121,16 @@ const VideosList = () => {
         </div>
       </div>
       <div className={`row ${style.verticalScrollable}`}>
-        <div className="col-md-4">
-          <div className={style.videos}>
-            <YouTube videoId="R7roiId3--U" opts={opts} />
-          </div>
-          <div className={style.videoCaption}>video caption</div>
-        </div>
+        {videoItems.map((item, index) => {
+          return (
+            <div key={index} className="col-md-4">
+              <div className={style.videos}>
+                <YouTube videoId={item.id.videoId} opts={opts} />
+              </div>
+              <div className={style.videoCaption}>video caption</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
