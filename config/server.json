@@ -1,0 +1,90 @@
+{
+  "uuid": "ba2d4f02-82de-41e6-ad2d-9aa2f69f3eb2",
+  "lastMigration": 27,
+  "name": "Server",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "7a05f3a7-acc7-4503-b151-a849007db4cd",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "videoList",
+      "responses": [
+        {
+          "uuid": "b04413f9-1eca-49b4-bddc-b9bfa3214652",
+          "body": "[\n  { \"id\" : 1 , \"videoId\" : \"oUjQ7eP38H8\"}, \n  { \"id\" : 2 , \"videoId\" : \"W2kWvCx2Rxk\"},\n  { \"id\" : 3 , \"videoId\" : \"lefHUxQurhU\"},\n  { \"id\" : 4 , \"videoId\" : \"JkHYPbiirGc\"},\n  { \"id\" : 5 , \"videoId\" : \"kknVfOJZ1w0\"},\n  { \"id\" : 6 , \"videoId\" : \"7ofkv2JzXwI\"},\n  { \"id\" : 7 , \"videoId\" : \"bWFaHDK54hU\"},\n  { \"id\" : 8 , \"videoId\" : \"6jvl0obxIWU\"},\n  { \"id\" : 9 , \"videoId\" : \"pKKiaqcDAio\"},\n  { \"id\" : 10 , \"videoId\" : \"WiWxuVd94X0\"}\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "7a05f3a7-acc7-4503-b151-a849007db4cd"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
