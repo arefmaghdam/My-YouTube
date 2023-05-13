@@ -2,6 +2,7 @@ import YouTube from "react-youtube";
 import style from "./VideosList.module.css";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -14,15 +15,15 @@ const VideosList = () => {
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchTerm}&key=AIzaSyB2N5UT2XMF5BB96S5wEVauTxjFMklOB5s`
+        `http://localhost:3001/videoList`
       )
       .then((response) => {
         if (response.status !== 200) return;
-        console.log(response.data.items);
-        setVideoItems(response.data.items);
+        console.log(response);
+        setVideoItems(response.data);
       })
       .catch((err) => {
-        console.log(err.code);
+        console.log(err.code + "***********");
       });
   }, [searchTerm]);
 
@@ -127,7 +128,11 @@ const VideosList = () => {
               <div className={style.videos}>
                 <YouTube videoId={item.id.videoId} opts={opts} />
               </div>
-              <div className={style.videoCaption}>video caption</div>
+              <div className={style.videoCaption}>
+                <div className={style.profile}>
+                  <FaUserCircle />
+                </div>
+              </div>
             </div>
           );
         })}
