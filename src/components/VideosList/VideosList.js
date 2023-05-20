@@ -73,7 +73,7 @@ const VideosList = () => {
             </a>
           </button>
           <div id="scrollDiv" className={style.category}>
-            <button className={`btn ${style.categoryButtons}`}>All</button>
+            <button className={`btn ${style.categoryButtons}`} autoFocus>All</button>
             <button className={`btn ${style.categoryButtons}`}>Live</button>
             <button className={`btn ${style.categoryButtons}`}>Music</button>
             <button className={`btn ${style.categoryButtons}`}>
@@ -130,8 +130,11 @@ const VideosList = () => {
               </div>
               <div className={style.videoCaption}>
                 <div className={style.profile}>
-                  <FaUserCircle />
+                  <div className={style.item1}><FaUserCircle /></div>
+                  <p className={style.item2}>{item.title}</p>
                 </div>
+                <div className={style.fontStyle}>{item.author}</div>
+                <div className={style.fontStyle}>{`${item.views} views . ${item.madeTime}`}</div>
               </div>
             </div>
           );
