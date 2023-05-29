@@ -7,6 +7,10 @@
   overflow-y: scroll;
 }
 
+.videoCaption:hover {
+  cursor: pointer;
+}
+
 .verticalScrollable > .row {
   position: absolute;
   height: 100%;

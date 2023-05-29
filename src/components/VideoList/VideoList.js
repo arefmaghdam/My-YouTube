@@ -4,10 +4,14 @@ import style from "./VideoList.module.css";
 import { FaUserCircle } from "react-icons/fa";
 import { useEffect } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { videoListState } from "../../redux/showVideoListSlice";
 
 const VideoList = () => {
   const [videoItems, setVideoItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("All");
+  const [showVideoList , setShowVideoList] = useState(true)
+  const dispatch=useDispatch();
 
   useEffect(() => {
     axios
@@ -22,6 +26,11 @@ const VideoList = () => {
       });
   }, [searchTerm]);
 
+  useEffect(() => {
+    console.log(showVideoList);
+    dispatch(videoListState(showVideoList));
+  },[showVideoList])
+
   const opts = {
     width: "",
     height: "",
@@ -30,6 +39,10 @@ const VideoList = () => {
       autoplay: 0,
     },
   };
+
+  const showVideoPlayer = () => {
+    console.log("video is clicked!");
+  }
 
   return (
     <div className={`container ${style.videoContainer}`}>
@@ -41,7 +54,7 @@ const VideoList = () => {
                 <YouTube videoId={item.id.videoId} opts={opts} />
               </div>
               <div className={style.videoCaption}>
-                <div className={style.profile}>
+                <div onClick={() => setShowVideoList(false)} className={style.profile}>
                   <div>
                     <FaUserCircle />
                   </div>

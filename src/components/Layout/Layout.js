@@ -4,7 +4,7 @@ import { SlMenu } from "react-icons/sl";
 import SearchBar from "../SearchBar/SearchBar";
 import Signin from "../Signin/Signin";
 import { useEffect, useState } from "react";
-import VideosList from "../VideosList/VideosList";
+import Videos from "../Videos/Videos";
 import { useSelector } from "react-redux";
 import WideSidebar from "../WideSidebar/WideSidebar";
 import Sidebar from "../Sidebar/Sidebar";
@@ -62,7 +62,7 @@ const Layout = () => {
         </div>
         <div className={sidebarState == true ? `col-md-10` : `col-md-11`}>
           <div className={style.videoListColumn}>
-            <VideosList />
+            <Videos />
           </div>
         </div>
       </div>
