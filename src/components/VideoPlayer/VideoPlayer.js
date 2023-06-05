@@ -14,77 +14,91 @@ import { useState } from "react";
 
 const VideoPlayer = () => {
   const videoListVideoId = useSelector((state) => state.videoListVideoId.value);
-  const [videoListId, setVideoListId] = useState("")
+  const [videoListId, setVideoListId] = useState("");
   useEffect(() => {
     console.log(videoListVideoId);
-    setVideoListId(videoListVideoId)
+    setVideoListId(videoListVideoId);
   }, [videoListVideoId]);
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
     event.target.pauseVideo();
   });
 
   const opts = (YouTubeProps["opts"] = {
-    height: "100%",
-    width: "100%",
+    height: "",
+    width: "",
     // playerVars: "https://developers.google.com/youtube/player_parameters",
   });
 
   return (
-    <>
-      <div className={style.videoStyle}>
-        <YouTube videoId={videoListId} opts={opts} onReady={onPlayerReady} />
-      </div>
-      <div className={style.videoCaption}>
-        <h5>React & Redux Learning crash course</h5>
-        <div className={style.flexContainer}>
-          <div className={style.item1}>
-            <div className={style.profile}>
-              <BiUserCircle />
-              <div className={style.profileName}>
-                <h6>Masood Sadri</h6>
-                <div>3.2K subscribers</div>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-8">
+          <div className={style.videoStyle}>
+            <YouTube
+              videoId={videoListId}
+              opts={opts}
+              onReady={onPlayerReady}
+            />
+          </div>
+          <div className={style.videoCaption}>
+            <h5>React & Redux Learning crash course</h5>
+            <div className={style.flexContainer}>
+              <div className={style.item1}>
+                <div className={style.profile}>
+                  <BiUserCircle />
+                  <div className={style.profileName}>
+                    <h6>Masood Sadri</h6>
+                    <div>3.2K subscribers</div>
+                  </div>
+                  <button className={`btn ${style.subscribe}`}>
+                    Subscribe
+                  </button>
+                </div>
               </div>
-              <button className={`btn ${style.subscribe}`}>Subscribe</button>
+              <div className={style.item2}>
+                <button className={`btn ${style.optionbtn}`}>
+                  <SlOptions />
+                </button>
+                <button className={`btn ${style.savebtn}`}>
+                  <RiPlayListAddLine /> Save
+                </button>
+                <button className={`btn ${style.sharebtn}`}>
+                  <TbShare3 /> Share
+                </button>
+                <button className={`btn ${style.dislikebtn}`}>
+                  <SlDislike />
+                </button>
+                <button className={`btn ${style.likebtn}`}>
+                  <SlLike /> <a>415</a>
+                </button>
+              </div>
+              <span className={style.videoAbstract}>
+                <h6>14K views 1 year ago</h6>
+                <p>
+                  This course is an intensive course that starts with the most
+                  basic topics and the main focus during the course will be on
+                  the more important concepts of the React library. The React
+                  intensive course is suitable for two groups of people, the
+                  first group of people who have no knowledge of this library
+                  but are interested in learning it, and the second group of
+                  people who intend to review the most important concepts in a
+                  short time.
+                </p>
+                <div className={`${style.sortbtn}`}>
+                  <span>98 Comments</span>
+                  <button className={`btn`}>
+                    <MdSort /> Sort by
+                  </button>
+                </div>
+              </span>
             </div>
           </div>
-          <div className={style.item2}>
-            <button className={`btn ${style.optionbtn}`}>
-              <SlOptions />
-            </button>
-            <button className={`btn ${style.savebtn}`}>
-              <RiPlayListAddLine /> Save
-            </button>
-            <button className={`btn ${style.sharebtn}`}>
-              <TbShare3 /> Share
-            </button>
-            <button className={`btn ${style.dislikebtn}`}>
-              <SlDislike />
-            </button>
-            <button className={`btn ${style.likebtn}`}>
-              <SlLike /> <a>415</a>
-            </button>
-          </div>
-          <span className={style.videoAbstract}>
-            <h6>14K views 1 year ago</h6>
-            <p>
-              This course is an intensive course that starts with the most basic
-              topics and the main focus during the course will be on the more
-              important concepts of the React library. The React intensive
-              course is suitable for two groups of people, the first group of
-              people who have no knowledge of this library but are interested in
-              learning it, and the second group of people who intend to review
-              the most important concepts in a short time.
-            </p>
-            <div className={`${style.sortbtn}`}>
-              <span>98 Comments</span>
-              <button className={`btn`}>
-                <MdSort /> Sort by
-              </button>
-            </div>
-          </span>
+        </div>
+        <div className="col-md-4">
+          suggestion videos
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
