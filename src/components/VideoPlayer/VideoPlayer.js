@@ -7,9 +7,18 @@ import { SlOptions } from "react-icons/sl";
 import { TbShare3 } from "react-icons/tb";
 import { SlDislike } from "react-icons/sl";
 import { SlLike } from "react-icons/sl";
-import {MdSort} from "react-icons/md"
+import { MdSort } from "react-icons/md";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const VideoPlayer = () => {
+  const videoListVideoId = useSelector((state) => state.videoListVideoId.value);
+  const [videoListId, setVideoListId] = useState("")
+  useEffect(() => {
+    console.log(videoListVideoId);
+    setVideoListId(videoListVideoId)
+  }, [videoListVideoId]);
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
     event.target.pauseVideo();
   });
@@ -22,9 +31,9 @@ const VideoPlayer = () => {
 
   return (
     <>
-      {/* <div className={style.videoStyle}>
-        <YouTube videoId="6QfN3ghaUfE" opts={opts} onReady={onPlayerReady} />
-      </div> */}
+      <div className={style.videoStyle}>
+        <YouTube videoId={videoListId} opts={opts} onReady={onPlayerReady} />
+      </div>
       <div className={style.videoCaption}>
         <h5>React & Redux Learning crash course</h5>
         <div className={style.flexContainer}>
@@ -68,7 +77,9 @@ const VideoPlayer = () => {
             </p>
             <div className={`${style.sortbtn}`}>
               <span>98 Comments</span>
-              <button className={`btn`}><MdSort/> Sort by</button>
+              <button className={`btn`}>
+                <MdSort /> Sort by
+              </button>
             </div>
           </span>
         </div>

@@ -12,16 +12,18 @@ const Videos = () => {
   const [leftScrollState, setLeftScrollState] = useState(0);
   const [rightScrollState, setRightScrollState] = useState(1);
   const [showVideoList, setShowVideoList] = useState(true);
-  const showVideoListListener = useSelector((state) => state.showVideoList.value)
+  const showVideoListListener = useSelector(
+    (state) => state.showVideoList.value
+  );
 
   useEffect(() => {
     setShowVideoList(true);
-  } ,[])
+  }, []);
 
   useEffect(() => {
     console.log(showVideoListListener);
     setShowVideoList(showVideoListListener);
-  } ,[showVideoListListener])
+  }, [showVideoListListener]);
 
   const leftScroll = (value) => {
     const element = document.getElementById("scrollDiv");

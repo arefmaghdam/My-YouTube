@@ -6,12 +6,14 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { videoListState } from "../../redux/showVideoListSlice";
+import { videoListVideoId } from "../../redux/videListVideoId";
 
 const VideoList = () => {
   const [videoItems, setVideoItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("All");
-  const [showVideoList , setShowVideoList] = useState(true)
-  const dispatch=useDispatch();
+  const [showVideoList, setShowVideoList] = useState(true);
+  const [videoId, setVideoId] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios
@@ -29,7 +31,12 @@ const VideoList = () => {
   useEffect(() => {
     console.log(showVideoList);
     dispatch(videoListState(showVideoList));
-  },[showVideoList])
+  }, [showVideoList]);
+
+  useEffect(() => {
+    console.log(videoId);
+    dispatch(videoListVideoId(videoId));
+  }, [videoId]);
 
   const opts = {
     width: "",
@@ -42,7 +49,7 @@ const VideoList = () => {
 
   const showVideoPlayer = () => {
     console.log("video is clicked!");
-  }
+  };
 
   return (
     <div className={`container ${style.videoContainer}`}>
@@ -54,7 +61,13 @@ const VideoList = () => {
                 <YouTube videoId={item.id.videoId} opts={opts} />
               </div>
               <div className={style.videoCaption}>
-                <div onClick={() => setShowVideoList(false)} className={style.profile}>
+                <div
+                  onClick={() => {
+                    setShowVideoList(false);
+                    setVideoId(item.videoId);
+                  }}
+                  className={style.profile}
+                >
                   <div>
                     <FaUserCircle />
                   </div>
