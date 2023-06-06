@@ -1,5 +1,6 @@
 import { useState } from "react";
 import YouTube from "react-youtube";
+import YouTubeProps from "react-youtube";
 import style from "./VideoList.module.css";
 import { FaUserCircle } from "react-icons/fa";
 import { useEffect } from "react";
@@ -38,18 +39,15 @@ const VideoList = () => {
     dispatch(videoListVideoId(videoId));
   }, [videoId]);
 
-  const opts = {
-    width: "",
-    height: "",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-    },
-  };
+  const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
+    event.target.pauseVideo();
+  });
 
-  const showVideoPlayer = () => {
-    console.log("video is clicked!");
-  };
+  const opts = (YouTubeProps["opts"] = {
+    height: "",
+    width: "",
+    // playerVars: "https://developers.google.com/youtube/player_parameters",
+  });
 
   return (
     <div className={`container ${style.videoContainer}`}>
@@ -58,7 +56,11 @@ const VideoList = () => {
           return (
             <div key={index} className="col-md-4">
               <div className={style.videos}>
-                <YouTube videoId={item.id.videoId} opts={opts} />
+                <YouTube
+                  videoId={item.id.videoId}
+                  opts={opts}
+                  onReady={onPlayerReady}
+                />
               </div>
               <div className={style.videoCaption}>
                 <div
