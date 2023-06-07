@@ -1,4 +1,3 @@
-import YouTube from "react-youtube";
 import style from "./Videos.module.css";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
@@ -21,7 +20,6 @@ const Videos = () => {
   }, []);
 
   useEffect(() => {
-    console.log(showVideoListListener);
     setShowVideoList(showVideoListListener);
   }, [showVideoListListener]);
 
@@ -48,9 +46,15 @@ const Videos = () => {
   };
 
   return (
-    <div className={`container ${style.videoContainer}`}>
-      <div className="row">
-        <div className="col-md-12">
+    <div className={` ${style.videoContainer}`}>
+      <div
+        className={`${
+          showVideoList
+            ? style.videoListTopScrollShow
+            : style.videoListTopScrollHide
+        }`}
+      >
+        <div>
           <button
             onClick={() => leftScroll(-50)}
             className={`btn ${style.leftScroll} ${

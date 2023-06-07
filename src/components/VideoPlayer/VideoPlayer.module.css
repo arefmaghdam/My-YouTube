@@ -1,3 +1,32 @@
+.videoContainer {
+  position: relative;
+  padding-right: 5px;
+  margin-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.verticalScrollable {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  margin-right: 0;
+  overflow-x: hidden;
+}
+
+.verticalScrollable > .row {
+  position: absolute;
+  height: 100%;
+  overflow-y: scroll;
+  margin-right: 0;
+}
+
+.videoPlayerTopScroll {
+  background-color: red;
+  width: 100%;
+  height: 50px;
+}
+
 .videoStyle {
   background-color: white;
   width: 100%;
@@ -201,4 +230,117 @@
   font-size: 15px;
   font-weight: 500;
   background-color: white;
+}
+
+.category {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 20px;
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  position: relative;
+  scrollbar-width: 1px;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.scrollbarWidth {
+  width: 100%;
+}
+
+.videoListTopScrollShow {
+  display: block;
+}
+
+.scrollContainer {
+  position: relative;
+  margin-right: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.category::-webkit-scrollbar {
+  display: none;
+}
+
+.leftScroll {
+  padding-top: 9px;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 0;
+  -webkit-box-shadow: 20px 0px 25px 15px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 20px 0px 25px 15px rgba(255, 255, 255, 1);
+  box-shadow: 20px 0px 25px 15px rgba(255, 255, 255, 1);
+}
+
+.leftScroll:focus {
+  box-shadow: none;
+  -webkit-box-shadow: 20px 0px 25px 15px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 20px 0px 25px 15px rgba(255, 255, 255, 1);
+  box-shadow: 20px 0px 25px 15px rgba(255, 255, 255, 1);
+}
+
+.leftScroll:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.rightScroll {
+  padding-top: 9px;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: 0;
+  -webkit-box-shadow: -20px 0px 25px 15px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -20px 0px 25px 15px rgba(255, 255, 255, 1);
+  box-shadow: -20px 0px 25px 15px rgba(255, 255, 255, 1);
+}
+
+.rightScroll:focus {
+  box-shadow: none;
+  -webkit-box-shadow: -20px 0px 25px 15px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -20px 0px 25px 15px rgba(255, 255, 255, 1);
+  box-shadow: -20px 0px 25px 15px rgba(255, 255, 255, 1);
+}
+
+.rightScroll:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.categoryButtons {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.categoryButtons:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.categoryButtons:focus {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.showButton {
+  display: block;
+}
+
+.hideButton {
+  display: none;
 }

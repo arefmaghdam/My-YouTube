@@ -8,6 +8,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { videoListState } from "../../redux/showVideoListSlice";
 import { videoListVideoId } from "../../redux/videListVideoId";
+import { videoListDatas } from "../../redux/videoListDatas";
 
 const VideoList = () => {
   const [videoItems, setVideoItems] = useState([]);
@@ -30,13 +31,12 @@ const VideoList = () => {
   }, [searchTerm]);
 
   useEffect(() => {
-    console.log(showVideoList);
     dispatch(videoListState(showVideoList));
   }, [showVideoList]);
 
   useEffect(() => {
-    console.log(videoId);
     dispatch(videoListVideoId(videoId));
+    dispatch(videoListDatas(JSON.stringify(videoItems)));
   }, [videoId]);
 
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
@@ -50,7 +50,7 @@ const VideoList = () => {
   });
 
   return (
-    <div className={`container ${style.videoContainer}`}>
+    <div className={`container-fluid ${style.videoContainer}`}>
       <div className={`row ${style.verticalScrollable}`}>
         {videoItems.map((item, index) => {
           return (
