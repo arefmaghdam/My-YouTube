@@ -217,13 +217,26 @@ const VideoPlayer = () => {
                 </div>
               </div>
             </div>
-            <div className={style.videoStyleSuggestion}>
-              <YouTube
-                videoId={videoListId}
-                opts={optsSuggestion}
-                onReady={onPlayerReady}
-              />
-            </div>
+            {videoListDatas.map((item, index) => {
+              return (
+                <div>
+                  <div class={style.listContainer}>
+                    <div key={index} className={style.videoStyleSuggestion}>
+                      <YouTube
+                        videoId={item.videoId}
+                        opts={optsSuggestion}
+                        onReady={onPlayerReady}
+                      />
+                    </div>
+                    <div class={style.item2}>
+                      <p>{item.title}</p>
+                      <h6>{item.author}</h6>
+                      <h6>{`${item.views} views . ${item.madeTime}`}</h6>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
