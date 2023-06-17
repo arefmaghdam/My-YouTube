@@ -245,9 +245,9 @@
 }
 
 .category {
-  padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 20px;
+  padding-top: 5px;
   background-color: white;
   display: flex;
   flex-flow: row nowrap;
