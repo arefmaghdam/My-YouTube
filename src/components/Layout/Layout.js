@@ -8,6 +8,7 @@ import Videos from "../Videos/Videos";
 import { useSelector } from "react-redux";
 import WideSidebar from "../WideSidebar/WideSidebar";
 import Sidebar from "../Sidebar/Sidebar";
+import OptionMenu from "../OptionMenu/OptionMenu";
 
 const Layout = () => {
   const [sidebarState, setSidebarState] = useState(true);
@@ -50,7 +51,9 @@ const Layout = () => {
       <div className="row">
         <div className={sidebarState == true ? `col-md-2` : `col-md-1`}>
           <div className={`${style.sideColumn}`}>
-            <div className={style.sideMenu}><Sidebar/></div>
+            <div className={style.sideMenu}>
+              <Sidebar />
+            </div>
             <div
               className={
                 sidebarState == true ? style.sidebarShow : style.sidebarHide
@@ -69,7 +72,7 @@ const Layout = () => {
       <div
         className={optStatus == false ? style.hideOptMenu : style.optionMenu}
       >
-        Option Menu
+        <OptionMenu/>
       </div>
     </div>
   );

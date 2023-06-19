@@ -25,9 +25,11 @@ const VideoPlayer = () => {
   useEffect(() => {
     setVideoListId(videoListVideoId);
   }, [videoListVideoId]);
+
   useEffect(() => {
     setVideoListDatas(JSON.parse(videoDatas));
   }, [videoDatas]);
+
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
     event.target.pauseVideo();
   });
