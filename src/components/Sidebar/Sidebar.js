@@ -13,31 +13,31 @@ const Sidebar = () => {
           <h5>
             <HiHome />
           </h5>{" "}
-          Home
+          <div className={style.menuContent}>Home</div>
         </li>
         <li className="navbar">
           <h5>
             <TbBrandYoutubeKids />
           </h5>{" "}
-          Shorts
+          <div className={style.menuContent}>Shorts</div>
         </li>
         <li className="navbar">
           <h5>
             <MdOutlineSubscriptions />
           </h5>{" "}
-          Subscriptions
+          <div className={style.menuContent}>Subscriptions</div>
         </li>
         <li className="navbar">
           <h5>
             <MdOutlineVideoLibrary />
           </h5>{" "}
-          Library
+          <div className={style.menuContent}>Library</div>
         </li>
         <li className="navbar">
           <h5>
             <VscHistory />
           </h5>{" "}
-          History
+          <div className={style.menuContent}>History</div>
         </li>
       </ul>
     </div>
