@@ -21,14 +21,26 @@ const VideoPlayer = () => {
   const [videoListDatas, setVideoListDatas] = useState([]);
   const [leftScrollState, setLeftScrollState] = useState(0);
   const [rightScrollState, setRightScrollState] = useState(1);
+  const [playingVideoDatas, setPlayingVideoDatas] = useState([]);
 
   useEffect(() => {
+    if (videoListVideoId == "") return;
     setVideoListId(videoListVideoId);
   }, [videoListVideoId]);
 
   useEffect(() => {
+    if (JSON.parse(videoDatas).length == 0) return;
     setVideoListDatas(JSON.parse(videoDatas));
   }, [videoDatas]);
+
+  useEffect(() => {
+    if (videoListDatas.length == 0) return;
+    for (let i = 0; i < videoListDatas.length; i++) {
+      if (videoListDatas[i].videoId === videoListVideoId) {
+        setPlayingVideoDatas(videoListDatas[i]);
+      }
+    }
+  }, [videoListDatas]);
 
   const onPlayerReady = (YouTubeProps["onReady"] = (event) => {
     event.target.pauseVideo();
@@ -81,57 +93,38 @@ const VideoPlayer = () => {
               />
             </div>
             <div className={style.videoCaption}>
-              <h5>React & Redux Learning crash course</h5>
+              <h5>{playingVideoDatas.title}</h5>
               <div className={style.flexContainer}>
                 <div className={style.item1}>
                   <div className={style.profile}>
                     <BiUserCircle />
                     <div className={style.profileName}>
-                      <h6>Masood Sadri</h6>
-                      <div>3.2K subscribers</div>
+                      <h6>{playingVideoDatas.author}</h6>
+                      <div>{`${playingVideoDatas.subscribers} subscribers`}</div>
                     </div>
-                    <button className={`btn ${style.subscribe}`}>
-                      Subscribe
-                    </button>
                   </div>
                 </div>
-                <div className={style.item2}>
-                  <button className={`btn ${style.optionbtn}`}>
-                    <SlOptions />
-                  </button>
+                <div className={style.item22}>
                   <button className={`btn ${style.savebtn}`}>
                     <RiPlayListAddLine /> Save
                   </button>
                   <button className={`btn ${style.sharebtn}`}>
                     <TbShare3 /> Share
                   </button>
+                  <button className={`btn ${style.likebtn}`}>
+                    <SlLike /> <a>{playingVideoDatas.likes}</a>
+                  </button>
                   <button className={`btn ${style.dislikebtn}`}>
                     <SlDislike />
                   </button>
-                  <button className={`btn ${style.likebtn}`}>
-                    <SlLike /> <a>415</a>
-                  </button>
                 </div>
-                <span className={style.videoAbstract}>
-                  <h6>14K views 1 year ago</h6>
-                  <p>
-                    This course is an intensive course that starts with the most
-                    basic topics and the main focus during the course will be on
-                    the more important concepts of the React library. The React
-                    intensive course is suitable for two groups of people, the
-                    first group of people who have no knowledge of this library
-                    but are interested in learning it, and the second group of
-                    people who intend to review the most important concepts in a
-                    short time.
-                  </p>
-                  <div className={`${style.sortbtn}`}>
-                    <span>98 Comments</span>
-                    <button className={`btn`}>
-                      <MdSort /> Sort by
-                    </button>
-                  </div>
-                </span>
               </div>
+            </div>
+            <div className={style.videoAbstract}>
+              <span>
+                <h6>{`${playingVideoDatas.views} views . ${playingVideoDatas.madeTime}`}</h6>
+                <p>{playingVideoDatas.description}</p>
+              </span>
             </div>
           </div>
           <div className={`col-md-5 ${style.scrollContainer}`}>
