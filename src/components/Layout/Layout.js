@@ -15,11 +15,17 @@ const Layout = () => {
   const [optStatus, setOptStatus] = useState(false);
 
   const optionMenuStatus = useSelector((state) => state.optionMenuStatus.value);
+  const sidebarMenuStatus = useSelector((state) => state.showVideoList.value);
 
   useEffect(() => {
     if (optionMenuStatus == 0) return;
     setOptStatus(!optStatus);
   }, [optionMenuStatus]);
+
+  useEffect(() => {
+    if (sidebarMenuStatus == true) return;
+    setSidebarState(false);
+  }, [sidebarMenuStatus]);
 
   const sidebarStatus = () => {
     setSidebarState(!sidebarState);
@@ -72,7 +78,7 @@ const Layout = () => {
       <div
         className={optStatus == false ? style.hideOptMenu : style.optionMenu}
       >
-        <OptionMenu/>
+        <OptionMenu />
       </div>
     </div>
   );

@@ -67,6 +67,7 @@ const VideoList = () => {
                   onClick={() => {
                     setShowVideoList(false);
                     setVideoId(item.videoId);
+                    dispatch(videoListState(false));
                   }}
                   className={style.profile}
                 >
