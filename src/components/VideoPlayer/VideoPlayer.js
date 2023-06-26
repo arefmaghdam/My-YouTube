@@ -5,11 +5,9 @@ import { BiUserCircle } from "react-icons/bi";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
 import { RiPlayListAddLine } from "react-icons/ri";
-import { SlOptions } from "react-icons/sl";
 import { TbShare3 } from "react-icons/tb";
 import { SlDislike } from "react-icons/sl";
 import { SlLike } from "react-icons/sl";
-import { MdSort } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -215,7 +213,9 @@ const VideoPlayer = () => {
             {videoListDatas.map((item) => {
               return (
                 <div key={item.videoId}>
-                  <div className={style.listContainer}>
+                  <div onClick={() => {
+                    setPlayingVideoDatas(item)
+                  }} className={style.listContainer}>
                     <div className={style.videoStyleSuggestion}>
                       <YouTube
                         videoId={item.videoId}

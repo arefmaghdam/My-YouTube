@@ -72,6 +72,10 @@
   margin-top: 7px;
 }
 
+.listContainer:hover {
+  cursor: pointer;
+}
+
 .videoCaption > h5 {
   text-align: left;
   margin-bottom: 2px;
