@@ -57,7 +57,7 @@ const VideoList = () => {
             <div key={index} className="col-md-4">
               <div className={style.videos}>
                 <YouTube
-                  videoId={item.id.videoId}
+                  videoId={item.videoId}
                   opts={opts}
                   onReady={onPlayerReady}
                 />
